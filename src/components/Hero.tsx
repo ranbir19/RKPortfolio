@@ -22,13 +22,14 @@ function HeroPhotoWithHeart({ profileImage }) {
 
   return (
     <div
-      className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-elegant border-4 border-border group-hover:shadow-glow transition-all duration-700 group-hover:scale-110 group-hover:-rotate-2 cursor-pointer"
+      className="relative w-40 h-40 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-elegant border-4 border-border transition-all duration-500 cursor-pointer sm:group-hover:scale-105 sm:group-hover:-rotate-1 sm:group-hover:shadow-glow"
       onClick={handleClick}
     >
       <img
         src={profileImage}
         alt="Ranbir Kalia - AI/ML Developer"
-        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-3"
+        className="w-full h-full object-cover rounded-full transition-all duration-700 group-hover:scale-125 group-hover:rotate-3"
+        style={{ maxWidth: '100%', maxHeight: '100%' }}
       />
       {/* Dynamic Overlay */}
       <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-15 transition-all duration-700"></div>
@@ -185,8 +186,8 @@ const Hero = () => {
         </div>
 
         {/* Profile Image */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative group w-56 h-56 sm:w-80 sm:h-80 md:w-96 md:h-96">
+        <div className="flex justify-center md:justify-end overflow-visible">
+          <div className="relative group w-40 h-40 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-visible">
             {/* Animated Background Rings */}
             <div className="absolute inset-0 rounded-full">
               <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 animate-ping [animation-duration:3s]"></div>
