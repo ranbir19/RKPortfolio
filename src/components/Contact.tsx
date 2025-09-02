@@ -62,7 +62,7 @@ const Contact = () => {
       icon: Mail,
       label: "Email",
       value: "ranbirkalia@gmail.com",
-      href: "mailto:ranbirkalia@gmail.com"
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=ranbirkalia@gmail.com"
     },
     {
       icon: Phone,
