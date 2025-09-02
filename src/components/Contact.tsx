@@ -85,13 +85,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-10 px-2 sm:py-16 sm:px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
             Get In <span className="bg-gradient-primary bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to collaborate on your next project? I'm always excited to discuss 
             new opportunities in AI/ML development and social media management.
           </p>
@@ -140,7 +140,7 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <div className="pt-8">
-              <h4 className="font-semibold text-foreground mb-4">Follow My Work</h4>
+              <h4 className="font-semibold text-foreground mb-2 sm:mb-4">Follow My Work</h4>
               <div className="flex gap-4">
                 <a 
                   href="https://instagram.com/med_studyblr_" 
@@ -166,14 +166,14 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Card className="p-8 bg-card border-border shadow-card">
-            <h3 className="font-display font-semibold text-2xl text-foreground mb-6">
+            <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground mb-4 sm:mb-6">
               Send a Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                     Name *
                   </label>
                   <Input
@@ -188,7 +188,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                     Email *
                   </label>
                   <Input
@@ -205,7 +205,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                   Subject *
                 </label>
                 <Input
@@ -221,7 +221,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
                   Message *
                 </label>
                 <Textarea
@@ -237,7 +237,7 @@ const Contact = () => {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg py-3"
+                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 text-base sm:text-lg py-2 sm:py-3"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Send Message

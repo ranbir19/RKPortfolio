@@ -37,65 +37,65 @@ const Services = () => {
       icon: Zap
     }
   ];
-  return <section id="services" className="py-20 px-4 bg-gradient-subtle">
+  return <section id="services" className="py-10 px-2 sm:py-16 sm:px-4 bg-gradient-subtle">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
             My <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Combining technical expertise with creative vision to deliver comprehensive 
             digital solutions that drive engagement and deliver results.
           </p>
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+  <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-10 sm:mb-16">
           {stats.map((stat, index) => <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <stat.icon className="h-8 w-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full mb-3 sm:mb-4">
+                <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
               </div>
-              <div className="font-display font-bold text-3xl md:text-4xl text-foreground mb-2">
+              <div className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-foreground mb-1 sm:mb-2">
                 {stat.number}
               </div>
-              <div className="text-muted-foreground font-medium">
+              <div className="text-muted-foreground font-medium text-xs sm:text-base">
                 {stat.label}
               </div>
             </div>)}
         </div>
 
         {/* Services Grid */}
-        <div className="space-y-8">
+  <div className="space-y-4 sm:space-y-8">
           {services.map((service, index) => <Card key={index} className="bg-card border-border shadow-card hover:shadow-elegant transition-all duration-300 overflow-hidden">
-              <div className="p-8">
-                <div className="grid md:grid-cols-3 gap-8 items-start">
+              <div className="p-4 sm:p-8">
+                <div className="grid md:grid-cols-3 gap-4 sm:gap-8 items-start">
                   {/* Service Header */}
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <service.icon className="h-8 w-8 text-primary" />
+                  <div className="space-y-2 sm:space-y-4">
+                    <div className="flex items-center gap-2 sm:gap-4">
+                      <div className="p-2 sm:p-3 bg-primary/10 rounded-lg">
+                        <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-display font-semibold text-2xl text-foreground">
+                        <h3 className="font-display font-semibold text-lg sm:text-2xl text-foreground">
                           {service.title}
                         </h3>
-                        <span className="text-sm text-primary font-medium">
+                        <span className="text-xs sm:text-sm text-primary font-medium">
                           {service.highlight}
                         </span>
                       </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-xs sm:text-base text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Features List */}
                   <div className="md:col-span-2">
-                    <h4 className="font-semibold text-foreground mb-4">What's Included:</h4>
-                    <div className="grid sm:grid-cols-2 gap-3">
-                      {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center gap-3">
+                    <h4 className="font-semibold text-foreground mb-2 sm:mb-4">What's Included:</h4>
+                    <div className="grid sm:grid-cols-2 gap-2 sm:gap-3">
+                      {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center gap-2 sm:gap-3">
                           <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                          <span className="text-muted-foreground text-sm">{feature}</span>
+                          <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                         </div>)}
                     </div>
                   </div>
@@ -105,8 +105,8 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          
+        <div className="mt-10 sm:mt-16 text-center">
+          {/* ...existing code... */}
         </div>
       </div>
     </section>;

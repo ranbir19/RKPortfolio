@@ -38,23 +38,23 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-4 relative overflow-hidden">
+  <section id="portfolio" className="py-10 px-2 sm:py-16 sm:px-4 relative overflow-hidden">
       <BackgroundAnimation />
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
             My <span className="bg-gradient-primary bg-clip-text text-transparent">Portfolio</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Showcasing innovative projects that combine artificial intelligence, machine learning, 
             and social media expertise to create meaningful digital solutions.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group bg-card border-border shadow-card hover:shadow-elegant transition-all duration-300 overflow-hidden">
-              <div className="p-6 space-y-4">
+              <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 {/* Project Header */}
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
@@ -78,16 +78,16 @@ const Portfolio = () => {
 
                 {/* Project Title & Description */}
                 <div className="space-y-3">
-                  <h3 className="font-display font-semibold text-xl text-foreground group-hover:text-primary transition-colors duration-200">
+                  <h3 className="font-display font-semibold text-base sm:text-xl text-foreground group-hover:text-primary transition-colors duration-200">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
                 </div>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1 sm:gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
@@ -99,7 +99,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex gap-3 pt-4">
+                <div className="flex gap-2 sm:gap-3 pt-3 sm:pt-4">
                   {project.liveUrl ? (
                     <Button 
                       variant="outline" 
@@ -140,12 +140,12 @@ const Portfolio = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-20">
-          <h3 className="font-display font-semibold text-2xl text-center mb-8">
+        <div className="mt-10 sm:mt-20">
+          <h3 className="font-display font-semibold text-xl sm:text-2xl text-center mb-6 sm:mb-8">
             Technical Skills
           </h3>
-          <div className="space-y-8">
-            <div className="rounded-xl bg-card p-6 shadow-md border border-border">
+          <div className="space-y-4 sm:space-y-8">
+            <div className="rounded-xl bg-card p-4 sm:p-6 shadow-md border border-border">
               <div className="flex items-center gap-2 mb-4">
                 <Monitor className="h-6 w-6 text-blue-400" />
                 <h4 className="font-semibold text-foreground text-lg">OS</h4>

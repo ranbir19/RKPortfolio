@@ -47,24 +47,24 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 bg-gradient-subtle">
+  <section id="about" className="py-10 px-2 sm:py-16 sm:px-4 bg-gradient-subtle">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A passionate third-year B.Tech student driven by artificial intelligence, machine learning, 
             and digital innovation. I combine technical expertise with strong leadership and social media 
             management skills to create meaningful impact in both academic and digital spaces.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+  <div className="grid md:grid-cols-2 gap-6 sm:gap-12 mb-10 sm:mb-16">
           {/* Personal Story */}
-          <div className="space-y-6">
-            <h3 className="font-display font-semibold text-2xl text-foreground">My Journey</h3>
-            <p className="text-muted-foreground leading-relaxed">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground">My Journey</h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               My journey in technology began with a curiosity about how artificial intelligence 
               could solve real-world problems. Currently pursuing B.Tech in AI/ML at CGC Landran, 
               I've developed a unique blend of technical and social media expertise.
@@ -82,17 +82,17 @@ const About = () => {
           </div>
 
           {/* Achievements */}
-          <div className="space-y-6">
-            <h3 className="font-display font-semibold text-2xl text-foreground">Key Achievements</h3>
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground">Key Achievements</h3>
             <div className="space-y-4">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex gap-4 p-4 bg-card rounded-lg border border-border shadow-card">
+                <div key={index} className="flex gap-2 sm:gap-4 p-3 sm:p-4 bg-card rounded-lg border border-border shadow-card">
                   <div className="flex-shrink-0">
                     <achievement.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">{achievement.title}</h4>
-                    <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                    <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">{achievement.title}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{achievement.description}</p>
                   </div>
                 </div>
               ))}
@@ -102,20 +102,20 @@ const About = () => {
 
         {/* Education Timeline */}
         <div>
-          <h3 className="font-display font-semibold text-2xl text-foreground mb-8 text-center">
+          <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground mb-6 sm:mb-8 text-center">
             Educational Background
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {education.map((edu, index) => (
-              <Card key={index} className="p-6 bg-card border-border shadow-card hover:shadow-elegant transition-all duration-300">
+              <Card key={index} className="p-4 sm:p-6 bg-card border-border shadow-card hover:shadow-elegant transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <GraduationCap className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h4 className="font-semibold text-lg text-foreground">{edu.level}</h4>
-                      <span className={`text-sm px-3 py-1 rounded-full ${
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1 sm:mb-2">
+                      <h4 className="font-semibold text-base sm:text-lg text-foreground">{edu.level}</h4>
+                      <span className={`text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full ${
                         edu.status === 'Current' 
                           ? 'bg-primary/20 text-primary' 
                           : 'bg-secondary text-secondary-foreground'
@@ -123,8 +123,8 @@ const About = () => {
                         {edu.status}
                       </span>
                     </div>
-                    <p className="text-muted-foreground mb-1">{edu.institution}</p>
-                    <p className="text-sm text-muted-foreground">{edu.period}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-1">{edu.institution}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{edu.period}</p>
                   </div>
                 </div>
               </Card>
