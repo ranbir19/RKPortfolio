@@ -1,5 +1,4 @@
 import { ExternalLink, Github, Brain, Zap, Code, Monitor, Code2, Wrench, Shield } from 'lucide-react';
-import BackgroundAnimation from '@/components/ui/BackgroundAnimation';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -39,7 +38,6 @@ const Portfolio = () => {
 
   return (
   <section id="portfolio" className="py-10 px-2 sm:py-16 sm:px-4 relative overflow-hidden">
-      <BackgroundAnimation />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">
